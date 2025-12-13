@@ -3,101 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Iyata Anthony – Portfolio</title>
+<title>Iyata Anthony | Researcher & Technologist</title>
 
 <style>
 :root{
-  --accent:#5b6cff;
-  --accent2:#7b88ff;
-  --bg:#f5f6fb;
+  --primary:#1f4fd8;
+  --secondary:#6f7bff;
+  --bg:#f5f7fb;
   --card:#ffffff;
+  --text:#222;
 }
-
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:Inter, system-ui, sans-serif;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   background:var(--bg);
-  color:#111827;
+  color:var(--text);
+  line-height:1.6;
 }
 
 /* HEADER */
 header{
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  background:linear-gradient(120deg,var(--primary),var(--secondary));
   color:#fff;
   text-align:center;
-  padding:40px 20px 30px;
-  border-bottom-left-radius:40px;
-  border-bottom-right-radius:40px;
+  padding:56px 20px 64px;
 }
-.profile-photo{
-  width:150px;
-  height:150px;
+header img{
+  width:160px;
+  height:160px;
   border-radius:50%;
   object-fit:cover;
-  border:5px solid rgba(255,255,255,.9);
+  border:5px solid #fff;
+  margin-bottom:15px;
 }
-h1{margin:15px 0 5px}
-.subtitle{opacity:.95}
+header h1{margin:10px 0 5px;font-size:32px}
+header p{margin:0;font-size:16px}
 
-/* LAYOUT */
-section{
-  max-width:1100px;
-  margin:40px auto;
-  padding:0 20px;
+/* NAVIGATION */
+nav{
+  position:sticky;
+  top:0;
+  background:#fff;
+  z-index:20;
+  box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
+nav ul{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  list-style:none;
+  margin:0;
+  padding:10px;
+  justify-content:center;
+}
+nav a{
+  font-size:13px;
+  text-decoration:none;
+  color:#222;
+  padding:7px 12px;
+  border-radius:999px;
+  border:1px solid #ddd;
+  transition:.25s;
+}
+nav a:hover{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+
+/* SECTIONS */
+section{
+  max-width:1150px;
+  margin:auto;
+  padding:50px 20px;
+}
+section h2{
+  margin-top:0;
+  margin-bottom:25px;
+  font-size:26px;
+  border-left:6px solid var(--primary);
+  padding-left:12px;
+}
+
 .card{
   background:var(--card);
-  padding:24px;
-  border-radius:18px;
-  box-shadow:0 10px 30px rgba(0,0,0,.06);
-  margin-bottom:25px;
+  border-radius:16px;
+  padding:22px;
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  margin-bottom:22px;
 }
-h2{color:var(--accent)}
+
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:22px;
+}
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:22px;
+}
 
 /* LOGOS */
-.logo{
-  width:60px;
-  height:auto;
-  transition:.3s;
+.logo-link img{
+  width:68px;
+  transition:transform .3s;
 }
-.logo:hover{
+.logo-link img:hover{
   transform:scale(1.15);
 }
 
-/* GRID */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
+/* BADGES */
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
 }
-
-/* SKILLS */
-.skill{
-  display:inline-block;
-  background:#eef2ff;
-  padding:8px 14px;
-  border-radius:20px;
-  margin:6px;
+.badges span{
+  background:#eef1ff;
+  padding:7px 12px;
+  border-radius:999px;
+  font-size:13px;
 }
 
 /* COLLAGE */
 .collage{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:10px;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:12px;
+  margin-top:18px;
 }
 .collage img{
   width:100%;
-  border-radius:12px;
+  border-radius:14px;
 }
 
-/* PDF PREVIEW */
-iframe{
-  width:100%;
-  height:500px;
-  border-radius:12px;
-  border:none;
+footer{
+  background:#fff;
+  text-align:center;
+  padding:30px;
+  color:#555;
 }
 </style>
 </head>
@@ -105,136 +152,167 @@ iframe{
 <body>
 
 <header>
-  <img src="1727691947865.jpg" class="profile-photo" alt="Iyata Anthony">
+  <img src="1727691947865.jpg" alt="Iyata Anthony">
   <h1>Iyata Anthony</h1>
-  <div class="subtitle">Researcher • Podcaster • Product-minded Professional</div>
+  <p>Researcher • Technologist • Energy Systems & IT Strategy</p>
 </header>
 
-<!-- ABOUT -->
-<section>
-  <div class="card">
-    <h2>About</h2>
-    <p>Energy & IT professional with experience spanning research, enterprise systems, data science, and emerging energy technologies.</p>
-  </div>
+<nav>
+<ul>
+  <li><a href="#about">2. About</a></li>
+  <li><a href="#education">3. Education</a></li>
+  <li><a href="#research">4. Research</a></li>
+  <li><a href="#work">5. Work Experience</a></li>
+  <li><a href="#skills">6. Technical Skills</a></li>
+  <li><a href="#business">7. Business</a></li>
+  <li><a href="#leadership">8. Leadership</a></li>
+  <li><a href="#licenses">9. Licenses</a></li>
+  <li><a href="#courses">10. Courses</a></li>
+  <li><a href="#volunteering">11. Volunteering</a></li>
+  <li><a href="#publications">12. Publications</a></li>
+  <li><a href="#honors">13. Honors</a></li>
+  <li><a href="#post">14. Post</a></li>
+  <li><a href="#blog">15. Blog</a></li>
+  <li><a href="#hobbies">16. Hobbies</a></li>
+  <li><a href="#contact">17. Contact</a></li>
+  <li><a href="#cv">18. CV</a></li>
+</ul>
+</nav>
+
+<section id="about">
+<h2>About</h2>
+<div class="card">
+<p>Iyata Anthony is a multidisciplinary researcher and technology professional with interests in energy systems, lithium-ion batteries, data science, and IT strategy.</p>
+</div>
 </section>
 
-<!-- EDUCATION -->
-<section>
+<section id="education">
 <h2>Education</h2>
-<div class="grid">
+<div class="grid-3">
 
 <div class="card">
-<a href="http://www.cmu.edu/africa" target="_blank">
-<img src="cmu.jpeg" class="logo">
+<a class="logo-link" href="http://www.cmu.edu/africa" target="_blank">
+<img src="cmu.jpeg">
 </a>
-<p><strong>Carnegie Mellon University Africa</strong><br>
-MSc Electrical & Computer Engineering<br>
-2024 – 2025 | GPA: 3.85/4.0</p>
+<h3>Carnegie Mellon University Africa</h3>
+<p>MSc Electrical & Computer Engineering<br>Jul 2024 – Dec 2025</p>
+<p><b>Grade:</b> 3.85 / 4.0</p>
 </div>
 
 <div class="card">
-<a href="https://www.wqu.edu" target="_blank">
-<img src="smarthub.jpg" class="logo">
+<a class="logo-link" href="https://www.wqu.edu" target="_blank">
+<img src="wqu.png">
 </a>
-<p><strong>WorldQuant University</strong><br>
-Scientific Computing & Python (Honors)</p>
+<h3>WorldQuant University</h3>
+<p>Scientific Computing & Python for Data Science<br>2019 • Honors</p>
 </div>
 
 <div class="card">
-<a href="https://www.babcock.edu.ng" target="_blank">
-<img src="shield.png" class="logo">
+<a class="logo-link" href="https://www.babcock.edu.ng" target="_blank">
+<img src="babcock.png">
 </a>
-<p><strong>Babcock University</strong><br>
-BSc Computer Science<br>
-First Class (4.6/5.0)</p>
+<h3>Babcock University, Nigeria</h3>
+<p>BSc Computer Science<br>2013 – 2017</p>
+<p><b>Grade:</b> First Class (4.6 / 5.0)</p>
 </div>
 
 </div>
 </section>
 
-<!-- RESEARCH -->
-<section>
-<div class="card">
+<section id="research">
 <h2>Research</h2>
-<strong>Published Works</strong>
+<div class="card">
 <ul>
-<li>Operations Research in Nigeria – AJOR (2018)</li>
-<li>Enterprise Architecture Models – EAPJ (2024)</li>
-</ul>
-<strong>Ongoing Work</strong>
-<ul>
-<li>Battery storage from EV & E-waste</li>
+<li>Published Work</li>
+<li>Ongoing Work</li>
 </ul>
 </div>
 </section>
 
-<!-- WORK EXPERIENCE -->
-<section>
+<section id="work">
 <h2>Work Experience</h2>
 
 <div class="card">
-<a href="http://www.kcrc.rw" target="_blank">
-<img src="kcrc.png" class="logo">
+<b>CV:</b>
+<a href="#">Academic CV</a> |
+<a href="#">Professional CV</a>
+</div>
+
+<div class="grid-2">
+
+<div class="card">
+<a class="logo-link" href="http://www.kcrc.rw" target="_blank">
+<img src="kcrc.png">
 </a>
-<p><strong>Research Assistant</strong> – Kigali Collaborative Research Centre</p>
+<h3>Research Assistant – KCRC</h3>
+<p>Jun 2025 – Present • Kigali, Rwanda</p>
 </div>
 
 <div class="card">
-<a href="http://www.nnpcgroup.com" target="_blank">
-<img src="nnpc.png" class="logo">
+<a class="logo-link" href="http://www.nnpcgroup.com" target="_blank">
+<img src="nnpc.png">
 </a>
-<p><strong>IT Strategist / Architect</strong> – NNPC Limited</p>
+<h3>NNPC Limited</h3>
+<p>IT Strategist (2023–Present)<br>
+Business & IS Architect (2020–2023)</p>
 </div>
 
 <div class="card">
-<a href="http://www.cmu.edu/africa" target="_blank">
-<img src="cmu.jpeg" class="logo">
+<a class="logo-link" href="http://www.cmu.edu/africa" target="_blank">
+<img src="cmu.jpeg">
 </a>
-<p><strong>IT Support Officer</strong> – CMU Africa</p>
+<h3>IT Support Officer – CMU Africa</h3>
+<p>Sep 2024 – May 2025</p>
 </div>
 
 <div class="card">
-<a href="http://www.zcp.com.ng" target="_blank">
-<img src="zane.jpeg" class="logo">
+<a class="logo-link" href="http://www.zcp.com.ng" target="_blank">
+<img src="zane.jpeg">
 </a>
-<p><strong>Operations Officer</strong> – Zane Commodity Platform</p>
+<h3>Operations Officer – Zane Commodity Platform</h3>
 </div>
 
 <div class="card">
-<a href="https://www.mathevia.co.uk" target="_blank">
-<img src="shield.png" class="logo">
+<a class="logo-link" href="https://www.mathevia.co.uk" target="_blank">
+<img src="shield.png">
 </a>
-<p><strong>Tutor</strong> – Mathevia</p>
+<h3>Tutor – Mathevia</h3>
 </div>
 
 <div class="card">
-<a href="https://www.gladepay.com" target="_blank">
-<img src="gtech.png" class="logo">
+<a class="logo-link" href="http://www.gladepay.com" target="_blank">
+<img src="gtech.png">
 </a>
-<p><strong>Software Developer</strong> – GladePay</p>
+<h3>Software Developer – GladePay</h3>
 </div>
 
+<div class="card">
+<a class="logo-link" href="http://thesmarthub.com.ng" target="_blank">
+<img src="smarthub.jpg">
+</a>
+<h3>System Analyst – Smarthub Nigeria</h3>
+</div>
+
+</div>
 </section>
 
-<!-- SKILLS -->
-<section>
+<section id="skills">
 <h2>Technical Skills</h2>
-<div class="card">
-<span class="skill">Python</span>
-<span class="skill">Data Science</span>
-<span class="skill">Lithium-ion Batteries</span>
-<span class="skill">EHS</span>
-<span class="skill">ITIL</span>
-<span class="skill">Operations Research</span>
-<span class="skill">Leadership</span>
+<div class="card badges">
+<span>Lithium-ion Batteries</span>
+<span>EHS Engineering</span>
+<span>Python</span>
+<span>Data Science</span>
+<span>ITIL</span>
+<span>Operations Research</span>
+<span>Leadership</span>
 </div>
 </section>
 
-<!-- POST -->
-<section>
+<section id="post">
 <h2>Post</h2>
 <div class="card">
-<p>CEPREC Rwanda visit to Volkswagen GenFarm Project – advancing Africa’s circular energy transition.</p>
+<p>CEPREC Rwanda visit to the Volkswagen GenFarm Project in Gashora, Rwanda.</p>
 <div class="collage">
 <img src="cerpec1.jpg">
 <img src="cerpec2.jpg">
@@ -245,35 +323,51 @@ First Class (4.6/5.0)</p>
 </div>
 </section>
 
-<!-- CV -->
-<section>
-<h2>CV</h2>
-
+<section id="blog">
+<h2>Blog</h2>
 <div class="card">
-<h3>Professional CV</h3>
-<iframe src="professional_cv.pdf"></iframe>
+<ul>
+<li>Research write-ups</li>
+<li>Tech articles</li>
+<li>Case studies</li>
+<li>Industry insights</li>
+<li>Thought leadership</li>
+</ul>
 </div>
-
-<div class="card">
-<h3>Certifications</h3>
-<iframe src="certificates.pdf"></iframe>
-</div>
-
-<div class="card">
-<h3>Academic CV</h3>
-<p>Coming soon</p>
-</div>
-
 </section>
 
-<!-- CONTACT -->
-<section>
+<section id="hobbies">
+<h2>Hobbies</h2>
 <div class="card">
+Reading • Gaming • Podcasting • Volunteering • Writing
+</div>
+</section>
+
+<section id="contact">
 <h2>Contact</h2>
-<p>Email: <a href="mailto:adikpeiyata@gmail.com">adikpeiyata@gmail.com</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/iyata-adikpe" target="_blank">View Profile</a></p>
+<div class="card">
+<p>Email: adikpeiyata@gmail.com<br>
+LinkedIn: <a href="https://www.linkedin.com/in/iyata-adikpe" target="_blank">LinkedIn Profile</a></p>
 </div>
 </section>
+
+<section id="cv">
+<h2>CV & Certifications</h2>
+<div class="card">
+<ul>
+<li>DASM – PMI</li>
+<li>BRMP – APMG</li>
+<li>Prosci® Change Management</li>
+<li>COBIT 2019 – ISACA</li>
+<li>PMI-ACP</li>
+</ul>
+<p>Academic CV (Upload later)</p>
+</div>
+</section>
+
+<footer>
+© Iyata Anthony
+</footer>
 
 </body>
 </html>
