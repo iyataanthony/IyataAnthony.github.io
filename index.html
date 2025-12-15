@@ -6,6 +6,69 @@
 <title>Iyata Anthony | Researcher & Technologist</title>
 
 <style>
+  <style>
+.li-cert {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.li-cert-thumb img {
+  width: 120px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.li-cert-thumb img:hover {
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.li-cert-text h4 {
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.li-cert-text p {
+  font-size: 13px;
+  margin-top: 4px;
+  color: #555;
+}
+
+/* Modal */
+.li-modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.85);
+}
+
+.li-modal-img {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin: 5% auto;
+  border-radius: 8px;
+}
+
+.li-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+</style>
+
 :root{
   --primary:#1f4fd8;
   --secondary:#6f7bff;
