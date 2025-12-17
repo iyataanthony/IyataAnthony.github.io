@@ -281,6 +281,19 @@ footer{
 }
 </style>
 </head>
+  <script>
+function toggleText(id, el) {
+  const text = document.getElementById(id);
+  if (text.classList.contains("expanded")) {
+    text.classList.remove("expanded");
+    el.textContent = "See more";
+  } else {
+    text.classList.add("expanded");
+    el.textContent = "See less";
+  }
+}
+</script>
+
 
 <body>
 
@@ -469,4 +482,305 @@ footer{
 
   </div>
 </section>
+  <section id="skills">
+  <h2>Technical Skills</h2>
+  <div class="card badges">
+    <span>Lithium-ion Batteries</span>
+    <span>EHS Engineering</span>
+    <span>Python</span>
+    <span>Data Science</span>
+    <span>ITIL</span>
+    <span>Operations Research</span>
+    <span>Leadership</span>
+    <span>Research Skills</span>
+    <span>Technical Support</span>
+    <span>Health & Safety Training</span>
+    <span>Safety Management Systems</span>
+    <span>Environment, Health, Safety (EHS)</span>
+    <span>Computer Science</span>
+    <span>Data Quality</span>
+    <span>Quality Assurance</span>
+    <span>English</span>
+    <span>Record Management</span>
+    <span>Debate</span>
+    <span>Pubic Speaking</span>
+    <span>Microsoft Office</span>
+    <span>Management</span>
+  </div>
+</section>
+
+<section id="licenses">
+  <h2>Licenses & Certifications</h2>
+
+  <div class="card">
+
+    <!-- DOT Certificate -->
+    <div class="li-cert">
+      <div class="li-cert-thumb" onclick="openCert('dot.jpg')">
+        <img src="dot.jpg" alt="USA DOT Hazardous Materials Certificate">
+      </div>
+
+      <div class="li-cert-text">
+        <a href="https://www.transportation.gov" target="_blank" class="li-cert-org">
+          <img src="dot.jpg" alt="DOT">
+        </a>
+
+        <h4>USA DOT Hazardous Materials Receiving</h4>
+        <p>Safety procedures in the receipt and handling of hazardous materials</p>
+        <p>
+          <b>skills:</b> Environment, Health, and Safety (EHS). EHS Engineering.
+          Health and Safety Training
+        </p>
+      </div>
+    </div>
+
+    <!-- LIB Certificate -->
+    <div class="li-cert">
+      <div class="li-cert-thumb" onclick="openCert('lib.jpg')">
+        <img src="lib.jpg" alt="LIB Safety Certificate">
+      </div>
+
+      <div class="li-cert-text">
+        <a href="https://www.cmu.edu" target="_blank" class="li-cert-org">
+          <img src="cmu.jpeg" alt="Carnegie Mellon University">
+        </a>
+
+        <h4>CMU Lithium-Ion Battery (LIB)</h4>
+        <p>Safety procedures for lithium-ion batteries</p>
+        <p>
+          <b>skills:</b> Lithium-ion Batteries. Safety Management. Systems.
+          Environment, Health, and Safety(EHS)
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Certification Modal -->
+<div id="certModal" class="li-modal">
+  <span class="li-close" onclick="closeCert()">&times;</span>
+  <img id="certImage" class="li-modal-img" alt="Certification">
+</div>
+  <section id="volunteering">
+  <h2>Volunteering</h2>
+
+  <div class="card">
+    <div class="card-header">
+      <img src="images/volunteer-icon.png" alt="Volunteering">
+      <div>
+        <h3>Secretary, Laity Education Committee</h3>
+        <p class="institution">
+          St Christopher Catholic Church, Kaura, Abuja
+        </p>
+        <p class="category">Education</p>
+      </div>
+    </div>
+
+    <p class="description">
+      Facilitation of educational programs for members of the
+      St Christopher Catholic Church, Kaura, Abuja.
+    </p>
+  </div>
+</section>
+
+<section id="publications" class="publications-section">
+  <h2 class="section-title">Publications</h2>
+
+  <div class="card">
+
+    <!-- Publication 1 -->
+    <div class="publication-card">
+      <h3 class="publication-title">
+        The Enterprise Architecture (EA) Practice – An Analysis of EA Models for Different Organisational Contexts
+      </h3>
+
+      <p class="publication-meta">
+        Enterprise Architecture Professional Journal (EAPJ) · Apr 6, 2024
+      </p>
+
+      <a
+        href="https://eapj.org/the-enterprise-architecture-ea-practice-an-analysis-of-ea-models-for-different-organisational-contexts/"
+        target="_blank"
+        class="publication-btn"
+      >
+        Show publication
+        <span class="arrow">↗</span>
+      </a>
+
+      <p class="publication-desc publication-text" id="pubText-0">
+        This research studies three broad Enterprise Architecture (EA) implementation models in enterprises as published by James Lapalme (2012) in the article: “Three Schools of Thought on Enterprise Architecture”. These schools of thought include:
+
+        EA for IT Architecting;
+        EA for Enterprise Integrating;
+        EA for Ecosystem Adaptation.
+
+        This article expands upon these schools of thought by highlighting the merits and demerits of each. The study also x-rays the EA implementation model adopted in Nigerian National Petroleum Company (NNPC) Limited and its attendant opportunities and drawbacks. The authors then propose a matrix to guide the selection of suitable EA implementation models based on certain identified organisational characteristics including the enterprise size, regulatory environment and business scope.
+
+        This research is particularly useful as it builds upon existing knowledge in the EA discipline as well as drawing from the experiential knowledge of the authors, and the review of EA subject matter experts working in a large energy enterprise with multiple subsidiaries (i.e., the NNPC Limited).
+
+        This study is suitable for individuals/organisations who are looking to maximise the benefits of EA in their organisations or mitigate/remediate risks often encountered in the implementation of EA as an organisational practice. It is also useful for academic purposes.
+      </p>
+
+      <span class="see-more" onclick="toggleText('pubText-0', this)">
+        See more
+      </span>
+    </div>
+
+    <!-- Publication 2 -->
+    <div class="publication-card">
+      <h3 class="publication-title">
+        Towards Fostering the Growth of Operations Research in Nigeria: The Role of Computer Scientists
+      </h3>
+
+      <p class="publication-meta">
+        American Journal of Operational Research · Nov 14, 2018
+      </p>
+
+      <a
+        href="http://article.sapub.org/10.5923.j.ajor.20180801.01.html"
+        target="_blank"
+        class="publication-btn"
+      >
+        Show publication
+        <span class="arrow">↗</span>
+      </a>
+
+      <p class="publication-desc publication-text" id="pubText-1">
+        Operations Research (OR) is an interdisciplinary field that finds its roots in applied mathematics, automates its underlying mathematical processes using computer science systems and mechanisms, and produce results for enhancing managerial decision making. The profession has grown and evolved from the use of traditional mathematical techniques for optimization of processes through to a stage where advanced computer-based techniques such as modelling and simulation are being used to carry out OR studies. This growth has been engendered by two main factors – wide acceptance by academic institutions; and, the impact of Computer Science tools and programs used for carrying out activities during OR studies. No country develops beyond its growth in science and technology. This paper presents the role Computer Science has played in the development of OR and consequently the role of Computer Scientists in each phase of OR studies. The paper also reveals the future prospects of OR as research in the area of Artificial Intelligence continues to find relevance in OR (i.e., Artificial Operations Research [AOR]). The paper concludes by presenting key recommendations for immediate action by the Nigerian government, business owners, academia and OR teams in order to position the country as a producer and exporter of OR tools and techniques and not just a consumer of OR techniques.
+
+        Keywords: Operations Research (OR), Computer Science, Computer Scientists, Artificial Operations Research
+      </p>
+
+      <span class="see-more" onclick="toggleText('pubText-1', this)">
+        See more
+      </span>
+    </div>
+
+  </div>
+</section>
+<section id="honors-awards" class="section-box">
+  <h2 class="section-title">Honors & Awards</h2>
+
+  <div class="award-item">
+    <h3>Most Supportive Classmate in the Class of 2026</h3>
+    <p class="issuer">Carnegie Mellon University Africa · Aug 2024</p>
+    <p class="description">
+      An award given to recognise the student with an aptitude to collaborate with fellow students in achieving set objectives for projects and other school organised activities.
+    </p>
+  </div>
+
+  <div class="award-item">
+    <h3>Vice President</h3>
+    <p class="issuer">
+      I.C.T Community Development Service (I.C.T C.D.S), National Youth Service Corp (NYSC) · Oct 2018
+    </p>
+    <p class="description">
+      Merit award given in recognition of outstanding contribution to the ICT CDS.
+    </p>
+  </div>
+
+  <div class="award-item">
+    <h3>First Class Honours, BSc Computer Science</h3>
+    <p class="issuer">Babcock University · Jun 2017</p>
+  </div>
+
+  <div class="award-item">
+    <h3>Most Influential Student</h3>
+    <p class="issuer">Babcock University Computer Club · Mar 2017</p>
+  </div>
+
+  <div class="award-item">
+    <h3>Most Versatile Student</h3>
+    <p class="issuer">Babcock University Computer Club · Mar 2016</p>
+  </div>
+</section>
+
+<section id="post">
+  <h2>Post</h2>
+  <div class="card">
+    <p>CEPREC Rwanda visit to the Volkswagen GenFarm Project in Gashora, Rwanda.</p>
+
+    <div class="collage">
+      <img src="cerpec1.jpg" alt="">
+      <img src="cerpec2.jpg" alt="">
+      <img src="cerpec3.jpg" alt="">
+      <img src="cerpec4.jpg" alt="">
+      <img src="cerpec5.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <h2>Blog</h2>
+  <div class="card">
+    <ul>
+      <li>Research write-ups</li>
+      <li>Tech articles</li>
+      <li>Case studies</li>
+      <li>Industry insights</li>
+      <li>Thought leadership</li>
+    </ul>
+  </div>
+</section>
+
+<section id="hobbies">
+  <h2>Hobbies</h2>
+  <div class="card">
+    Reading • Gaming • Podcasting • Volunteering • Writing
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>
+      Email: adikpeiyata@gmail.com<br>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/iyata-adikpe" target="_blank">
+        LinkedIn Profile
+      </a>
+    </p>
+  </div>
+</section>
+
+<section id="cv-certifications" class="section-box">
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="cert-group">
+    <h3>Business</h3>
+    <ul>
+      <li><a href="#" onclick="openCert('brmp.jpg')">Business Relationship Management Professional (BRMP)</a></li>
+      <li><a href="#" onclick="openCert('ab.jpg')">Agile Business Analysis</a></li>
+      <li><a href="#" onclick="openCert('blackbird.jpg')">Blackbird Strategy</a></li>
+      <li><a href="#" onclick="openCert('prosci.jpg')">Prosci Change Management</a></li>
+    </ul>
+  </div>
+
+  <div class="cert-group">
+    <h3>Industries</h3>
+    <ul>
+      <li><a href="#" onclick="openCert('dot.jpg')">Digital Transformation</a></li>
+      <li><a href="#" onclick="openCert('lib.jpg')">Library & Information Systems</a></li>
+      <li><a href="#" onclick="openCert('nnpcc.jpg')">NNPCC</a></li>
+      <li><a href="#" onclick="openCert('ieee.jpg')">IEEE Membership</a></li>
+    </ul>
+  </div>
+
+  <div class="cert-group">
+    <h3>Information Technology</h3>
+    <ul>
+      <li><a href="#" onclick="openCert('aif.jpg')">Artificial Intelligence Fundamentals</a></li>
+      <li><a href="#" onclick="openCert('cyber.jpg')">Cybersecurity</a></li>
+      <li><a href="#" onclick="openCert('pmi.jpg')">Project Management Institute (PMI)</a></li>
+      <li><a href="#" onclick="openCert('scp.jpg')">Supply Chain Professional</a></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  © Linestech
+</footer>
+
+
 
